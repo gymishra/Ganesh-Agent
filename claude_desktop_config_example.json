@@ -1,9 +1,0 @@
-{
-  "mcpServers": {
-    "odata-mcp-server": {
-      "command": "/home/gyanmis/run-odata-mcp.sh",
-      "args": [],
-      "env": {}
-    }
-  }
-}
