@@ -1,0 +1,155 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "41cf8942-15b5-4fc8-901e-bcf5d589c720",
+  "location" : "s3://734a81dd-4d68-47af-hgyt1by31wbnezdejhddi1uuo6bfquse1b--table-s3",
+  "last-sequence-number" : 0,
+  "last-updated-ms" : 1754009483995,
+  "last-column-id" : 20,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "bucket",
+      "required" : true,
+      "type" : "string",
+      "doc" : "The general purpose bucket name."
+    }, {
+      "id" : 2,
+      "name" : "key",
+      "required" : true,
+      "type" : "string",
+      "doc" : "The object key name (or key) that uniquely identifies the object in the bucket."
+    }, {
+      "id" : 3,
+      "name" : "sequence_number",
+      "required" : true,
+      "type" : "string",
+      "doc" : "The sequence number, which is an ordinal that's included in the records for a given\nobject. To order records of the same bucket and key, you can sort on sequence_number.\nFor a given bucket and key, a lexicographically larger sequence_number implies that the\nrecord was introduced to the bucket more recently."
+    }, {
+      "id" : 4,
+      "name" : "version_id",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The object's version ID. When you enable versioning on a bucket, Amazon S3 assigns a\nversion number to objects that are added to the bucket. Objects that are stored in your\nbucket before you set the versioning state have a version ID of null."
+    }, {
+      "id" : 5,
+      "name" : "is_delete_marker",
+      "required" : false,
+      "type" : "boolean",
+      "doc" : "The object's delete marker status. If the object is a delete marker, this value is True.\nOtherwise, it's False."
+    }, {
+      "id" : 6,
+      "name" : "size",
+      "required" : false,
+      "type" : "long",
+      "doc" : "The object size in bytes, not including the size of incomplete multipart uploads or\nobject metadata. If is_delete_marker is True, the size is 0."
+    }, {
+      "id" : 7,
+      "name" : "last_modified_date",
+      "required" : false,
+      "type" : "timestamp",
+      "doc" : "The object creation date or the last modified date, whichever is the latest."
+    }, {
+      "id" : 8,
+      "name" : "e_tag",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The entity tag (ETag), which is a hash of the object. The ETag reflects changes only to\nthe contents of an object, not to its metadata."
+    }, {
+      "id" : 9,
+      "name" : "storage_class",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The storage class that's used for storing the object."
+    }, {
+      "id" : 10,
+      "name" : "is_multipart",
+      "required" : false,
+      "type" : "boolean",
+      "doc" : "The object's upload type. If the object was uploaded as a multipart upload, this value\nis True. Otherwise, it's False."
+    }, {
+      "id" : 11,
+      "name" : "encryption_status",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The object's server-side encryption status, depending on what kind of encryption key is\nused. If the object isn't encrypted, the value is null."
+    }, {
+      "id" : 12,
+      "name" : "is_bucket_key_enabled",
+      "required" : false,
+      "type" : "boolean",
+      "doc" : "The object's S3 Bucket Key enablement status. If the object uses an S3 Bucket Key for\nSSE-KMS, this value is True. Otherwise, it's False."
+    }, {
+      "id" : 13,
+      "name" : "kms_key_arn",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The Amazon Resource Name (ARN) for the KMS key with which the object is encrypted, for\nrows where encryption_status is SSE-KMS or DSSE-KMS. If the object isn't encrypted with\nSSE-KMS or DSSE-KMS, the value is null. Note: If a row represents an object version that\nno longer existed at the time that a delete or overwrite event was processed,\nkms_key_arn contains a null value, even if the encryption_status column value is SSE-KMS\nor DSSE-KMS."
+    }, {
+      "id" : 14,
+      "name" : "checksum_algorithm",
+      "required" : false,
+      "type" : "string",
+      "doc" : "The algorithm that’s used to create the checksum for the object. If no checksum is\npresent, this value is null."
+    }, {
+      "id" : 15,
+      "name" : "object_tags",
+      "required" : false,
+      "type" : {
+        "type" : "map",
+        "key-id" : 17,
+        "key" : "string",
+        "value-id" : 18,
+        "value" : "string",
+        "value-required" : false
+      },
+      "doc" : "The object tags that are associated with the object. Object tags are stored as a map of\nkey-value pairs. If an object has no object tags, an empty map (\"{}\") is stored."
+    }, {
+      "id" : 16,
+      "name" : "user_metadata",
+      "required" : false,
+      "type" : {
+        "type" : "map",
+        "key-id" : 19,
+        "key" : "string",
+        "value-id" : 20,
+        "value" : "string",
+        "value-required" : false
+      },
+      "doc" : "The user metadata that's associated with the object. User metadata is stored as a map of\nkey-value pairs. If an object has no user metadata, an empty map (\"{}\") is stored."
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "aws.s3metadata.schema-version" : "1.0.0",
+    "aws.s3metadata.source-bucket" : "sapogrndata",
+    "write.merge.mode" : "merge-on-read",
+    "write.delete.mode" : "merge-on-read",
+    "write.parquet.compression-codec" : "zstd",
+    "aws.s3metadata.source-bucket-owner" : "953841955037",
+    "write.update.mode" : "merge-on-read",
+    "table-identifier-checksum-v1" : "-109212829",
+    "aws.s3metadata.table-type" : "INVENTORY",
+    "aws.s3metadata.backfill-status" : "BACKFILLING",
+    "aws.s3metadata.table-arn" : "arn:aws:s3tables:us-east-1:953841955037:bucket/aws-s3/table/734a81dd-4d68-47af-8081-fb474a486ddd"
+  },
+  "current-snapshot-id" : -1,
+  "refs" : { },
+  "snapshots" : [ ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ ],
+  "metadata-log" : [ ]
+}

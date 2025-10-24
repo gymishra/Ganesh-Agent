@@ -1,0 +1,68 @@
+{
+  "mcpServers": {
+    "mcp-abap-adt-api": {
+      "command": "node",
+      "args": [
+        "/home/gyanmis/mcp-abap-abap-adt-api/dist/index.js"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "searchObject",
+        "getObjectSource",
+        "syntaxCheckCode",
+        "GetTable",
+        "GetStructure"
+      ],
+      "description": "MCP server for ABAP ADT API integration - provides ABAP development tools",
+      "metadata": {
+        "version": "0.1.1",
+        "author": "mario-andreschak",
+        "capabilities": [
+          "ABAP Object Management",
+          "Source Code Analysis",
+          "Transport Management",
+          "Dictionary Access",
+          "Syntax Checking"
+        ]
+      }
+    },
+    "aws-documentation": {
+      "command": "uvx",
+      "args": [
+        "awslabs-aws-documentation-mcp-server"
+      ],
+      "disabled": false,
+      "description": "AWS Documentation MCP server for real-time AWS service information"
+    }
+  },
+  "globalSettings": {
+    "timeout": 30000,
+    "maxRetries": 3,
+    "logLevel": "info"
+  },
+  "profiles": {
+    "sap-development": {
+      "enabledServers": [
+        "mcp-abap-adt-api",
+        "aws-documentation"
+      ],
+      "description": "Profile for SAP development with AWS integration"
+    },
+    "sap-curriculum": {
+      "enabledServers": [
+        "mcp-abap-adt-api",
+        "aws-documentation"
+      ],
+      "autoApprove": [
+        "searchObject",
+        "getObjectSource",
+        "search_documentation",
+        "read_documentation"
+      ],
+      "description": "Profile optimized for SAP GenAI curriculum development"
+    }
+  }
+}

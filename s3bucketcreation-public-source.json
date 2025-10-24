@@ -1,0 +1,120 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS Workshop S3 template - Public source approach",
+  "Parameters": {
+    "BucketPrefix": {
+      "Type": "String",
+      "Default": "dsbucket",
+      "Description": "Prefix for S3 bucket name"
+    }
+  },
+  "Resources": {
+    "FileUploadRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        ],
+        "Policies": [
+          {
+            "PolicyName": "S3Access",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject",
+                    "s3:PutObjectAcl",
+                    "s3:ListBucket",
+                    "s3:GetBucketLocation"
+                  ],
+                  "Resource": [
+                    {"Fn::GetAtt": ["creates3bucket", "Arn"]},
+                    {"Fn::Sub": "${creates3bucket.Arn}/*"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "FileUploadFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Runtime": "python3.12",
+        "Timeout": 300,
+        "Handler": "index.handler",
+        "Role": {"Fn::GetAtt": ["FileUploadRole", "Arn"]},
+        "Code": {
+          "ZipFile": "import boto3\nimport cfnresponse\nimport urllib.request\nimport json\n\ndef handler(event, context):\n    try:\n        print(f'Event: {json.dumps(event, default=str)}')\n        if event['RequestType'] == 'Delete':\n            cfnresponse.send(event, context, cfnresponse.SUCCESS, {})\n            return\n        \n        dest_bucket = event['ResourceProperties']['DestBucket']\n        \n        # Workshop files with their download URLs\n        workshop_files = {\n            'INV_001.pdf': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/INV_001.pdf',\n            'Quotation12345.pdf': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/Quotation12345.pdf',\n            'block-reference-description.xlsx': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/block-reference-description.xlsx',\n            'haltcodedescription.xlsx': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/haltcodedescription.xlsx',\n            'inv-po-halt-cd-relation.xlsx': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/inv-po-halt-cd-relation.xlsx',\n            'invoice-payment-details.xlsx': 'https://raw.githubusercontent.com/aws-samples/ui-patterns-for-sap-generative-ai-bi/main/static/invoice-payment-details.xlsx'\n        }\n        \n        s3 = boto3.client('s3')\n        files_uploaded = 0\n        \n        for filename, url in workshop_files.items():\n            try:\n                print(f'Downloading {filename} from {url}')\n                \n                # Download file from URL\n                with urllib.request.urlopen(url) as response:\n                    file_data = response.read()\n                \n                # Upload to S3\n                s3.put_object(\n                    Bucket=dest_bucket,\n                    Key=filename,\n                    Body=file_data,\n                    ContentType='application/octet-stream'\n                )\n                \n                files_uploaded += 1\n                print(f'Successfully uploaded {filename}')\n                \n            except Exception as e:\n                print(f'Failed to process {filename}: {str(e)}')\n                # Continue with other files\n        \n        print(f'Successfully uploaded {files_uploaded} files')\n        cfnresponse.send(event, context, cfnresponse.SUCCESS, {\n            'FilesUploaded': files_uploaded,\n            'DestinationBucket': dest_bucket\n        })\n        \n    except Exception as e:\n        error_msg = f'Unexpected error: {str(e)}'\n        print(error_msg)\n        cfnresponse.send(event, context, cfnresponse.FAILED, {'Error': error_msg})"
+        }
+      }
+    },
+    "creates3bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "BucketName": {"Fn::Sub": "${AWS::AccountId}-${BucketPrefix}-${AWS::StackName}"},
+        "OwnershipControls": {
+          "Rules": [
+            {
+              "ObjectOwnership": "BucketOwnerEnforced"
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      }
+    },
+    "UploadFiles": {
+      "Type": "Custom::FileUpload",
+      "Properties": {
+        "ServiceToken": {"Fn::GetAtt": ["FileUploadFunction", "Arn"]},
+        "DestBucket": {"Ref": "creates3bucket"}
+      },
+      "DependsOn": "creates3bucket"
+    }
+  },
+  "Outputs": {
+    "S3BucketName": {
+      "Description": "Name of the created S3 bucket",
+      "Value": {"Ref": "creates3bucket"},
+      "Export": {
+        "Name": {"Fn::Sub": "${AWS::StackName}-S3BucketName"}
+      }
+    },
+    "FilesUploaded": {
+      "Description": "Number of files automatically uploaded",
+      "Value": {"Fn::GetAtt": ["UploadFiles", "FilesUploaded"]}
+    }
+  }
+}

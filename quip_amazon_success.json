@@ -1,0 +1,49 @@
+{
+  "thread": {
+    "author_id": "YTX9EAaIwZr",
+    "thread_class": "document",
+    "owning_company_id": "bAQ9cAkaQjr",
+    "id": "QSF9AAUoXJY",
+    "created_usec": 1755615929353197,
+    "updated_usec": 1757830292371166,
+    "title": "\u2018Amazon Q Business\u2019 for  internal AWS-SAP community",
+    "sharing": {
+      "company_id": "bAQ9cAkaQjr",
+      "company_mode": "EDIT"
+    },
+    "link": "https://quip-amazon.com/8UhjA0uQupLl",
+    "document_id": "QSF9BAQgfZb",
+    "type": "document",
+    "is_template": false,
+    "is_deleted": false
+  },
+  "user_ids": [
+    "EBe9EAQVYHc",
+    "YTX9EAaIwZr",
+    "ZPd9EAx1FM1",
+    "ccI9EAB8BGG"
+  ],
+  "shared_folder_ids": [],
+  "expanded_user_ids": [
+    "ccI9EAB8BGG",
+    "ZPd9EAx1FM1",
+    "YTX9EAaIwZr",
+    "EBe9EAQVYHc"
+  ],
+  "invited_user_emails": [],
+  "access_levels": {
+    "EBe9EAQVYHc": {
+      "access_level": "OWN"
+    },
+    "YTX9EAaIwZr": {
+      "access_level": "OWN"
+    },
+    "ZPd9EAx1FM1": {
+      "access_level": "OWN"
+    },
+    "ccI9EAB8BGG": {
+      "access_level": "OWN"
+    }
+  },
+  "html": "<h1 id='temp:C:QSF22d333798cb64276aefade787'>\u2018Amazon Q Business\u2019 for\u00a0 internal AWS-SAP community\u00a0 \u00a0</h1>\n\n<p id='temp:C:QSF2228c87bfd634ba1a219adbe1' class='line'>\u200b</p>\n\n<p id='temp:C:QSF6361cf72185844b08fdcd7704' class='line'>Q Business Application for AWS-SAP Knowledge Hub</p>\n\n<div class=\"\" data-section-style='5' style=\"\"><ul id='temp:C:QSFf15ef1afff2549fc9ef4b101a'><li id='temp:C:QSFd3db06aca37a4663b6c376b2d' class='' value='1'><span id='temp:C:QSFd3db06aca37a4663b6c376b2d'><b>Configure -\u00a0 Amazon Q Business\u00a0</b></span>\n\n<br/></li><li id='temp:C:QSFaa751f15c54b45d59ed4c9548' class='parent'><span id='temp:C:QSFaa751f15c54b45d59ed4c9548'><b>Data Sources (S3 and Web Crawler) :</b></span>\n\n<br/></li><ul><li id='temp:C:QSF815c8410d8434bfd939935780' class=''><span id='temp:C:QSF815c8410d8434bfd939935780'>Blogs</span>\n\n<br/></li><li id='temp:C:QSFba7a6915ddae4a0482c7e75bb' class=''><span id='temp:C:QSFba7a6915ddae4a0482c7e75bb'>Workdocs</span>\n\n<br/></li><li id='temp:C:QSFa3a3b25eaa0c404eafd67f484' class=''><span id='temp:C:QSFa3a3b25eaa0c404eafd67f484'>Use Cases/Assets Database</span>\n\n<br/></li><li id='temp:C:QSFdb86da424e864312b4ec7b613' class=''><span id='temp:C:QSFdb86da424e864312b4ec7b613'>URL/FCD Asset Repository</span>\n\n<br/></li><li id='temp:C:QSF306b221d75404be0b708e48e1' class=''><span id='temp:C:QSF306b221d75404be0b708e48e1'>FAQ Database</span>\n\n<br/></li><li id='temp:C:QSF9e9a0d9ae9ef4cea8467bfe61' class=''><span id='temp:C:QSF9e9a0d9ae9ef4cea8467bfe61'>Blog Content from Web Crawling</span>\n\n<br/></li></ul><li id='temp:C:QSFf9121e29bb1946828659d0dfb' class='parent'><span id='temp:C:QSFf9121e29bb1946828659d0dfb'><b>Authentication &amp; Security:</b></span>\n\n<br/></li><ul><li id='temp:C:QSFe710d5c6445d426d8307a7257' class=''><span id='temp:C:QSFe710d5c6445d426d8307a7257'>Midway Authentication integration</span>\n\n<br/></li></ul><li id='temp:C:QSFf283d7a094dd49f8858d45104' class='parent'><span id='temp:C:QSFf283d7a094dd49f8858d45104'><b>Additional Features:</b></span>\n\n<br/></li><ul><li id='temp:C:QSF2d020b21af284d5590a0ed4ce' class=''><span id='temp:C:QSF2d020b21af284d5590a0ed4ce'>Q Business Apps\u00a0 - EWA Analyzer</span>\n\n<br/></li><li id='temp:C:QSFce43bf993b1749db9b18d079c' class=''><span id='temp:C:QSFce43bf993b1749db9b18d079c'>Q Business App - Ask Rise Service Document</span>\n\n<br/></li><li id='temp:C:QSFfbfa99dc813642f7915c9ec05' class=''><span id='temp:C:QSFfbfa99dc813642f7915c9ec05'>Q Business App - Suggestion for the\u00a0</span>\n\n<br/></li><li id='temp:C:QSF9a7af13f155746ec86f84ddb5' class=''><span id='temp:C:QSF9a7af13f155746ec86f84ddb5'>Document version control (default feature)</span>\n\n<br/></li><li id='temp:C:QSFd0b5f945eca44f3a99f8dab27' class=''><span id='temp:C:QSFd0b5f945eca44f3a99f8dab27'>Usage analytics and reporting (default feature)</span>\n\n<br/></li></ul></ul></div><p id='temp:C:QSF150cbe3f87aa4fa99432da346' class='line'><b>Implementation Steps:</b></p>\n\n<div class=\"\" data-section-style='6' style=\"\"><ul id='temp:C:QSF0bcd7ef6c9394bf6a442fde19'><ul><li id='temp:C:QSFf959bc6e7ca342039226eccaf' class='' value='1'><span id='temp:C:QSFf959bc6e7ca342039226eccaf'>Set up AWS infrastructure in TFC account</span>\n\n<br/></li><li id='temp:C:QSFa09b360af9f54cfea2ad59dc5' class=''><span id='temp:C:QSFa09b360af9f54cfea2ad59dc5'>Create Amazon Q Business Application</span>\n\n<br/></li><li id='temp:C:QSF2bd6f324483144b481f8ff69a' class=''><span id='temp:C:QSF2bd6f324483144b481f8ff69a'>Set up data source connectors</span>\n\n<br/></li><li id='temp:C:QSFcdfb06e910114cfa9e54c9650' class=''><span id='temp:C:QSFcdfb06e910114cfa9e54c9650'>Configure Midway Authentication</span>\n\n<br/></li><li id='temp:C:QSF0b9031e774de4dd3b610b4d2f' class=''><span id='temp:C:QSF0b9031e774de4dd3b610b4d2f'>Create Q Business Apps</span>\n\n<br/></li></ul></ul></div><p id='temp:C:QSFec8e970a29924fc5bbfb3f16b' class='line'>\u200b</p>\n\n<p id='temp:C:QSF63a1e1facf784a26b3ba96fe9' class='line'>Here's a strategic approach for building an SAP Q Business chatbot with multiple data sources:<br/><br/>Next : <br/>1/ Identify TFC members responsible for update the Data , Maintaining Quality.<br/>2/ Schdule for the Updates</p>\n\n<p id='temp:C:QSF5fd88524988642119b1ec1c0c' class='line'>\u200b</p>\n\n<p id='temp:C:QSF844820f72f474a6eadbca6eba' class='line'>\u200b</p>\n\n<p id='temp:C:QSFdf0e431a5f63478e953e5d3f1' class='line'>\u200b</p>\n\n"
+}

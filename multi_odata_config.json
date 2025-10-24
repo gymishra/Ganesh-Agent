@@ -1,0 +1,63 @@
+{
+  "mcp_servers": {
+    "sap-sales-order-service": {
+      "description": "SAP S/4HANA Sales Order Management API - WORKING",
+      "service_url": "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/API_SALES_ORDER_SRV/",
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/API_SALES_ORDER_SRV/",
+        "--user", "bpinst",
+        "--password", "Welcome1",
+        "--tool-shrink",
+        "--read-only",
+        "--max-items", "50"
+      ],
+      "status": "✅ WORKING - 67 tools available"
+    },
+    "sap-employee-service": {
+      "description": "SAP Employee Management Service",
+      "service_url": "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/APS_BUM_EMPLOYEE_SRV/",
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/APS_BUM_EMPLOYEE_SRV/",
+        "--user", "bpinst",
+        "--password", "Welcome1",
+        "--tool-shrink",
+        "--read-only",
+        "--max-items", "50"
+      ],
+      "status": "🔄 Ready to test"
+    },
+    "northwind-demo": {
+      "description": "Northwind demo service (no auth required)",
+      "service_url": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://services.odata.org/V2/Northwind/Northwind.svc/",
+        "--tool-shrink",
+        "--read-only",
+        "--entities", "Products,Orders,Customers,Categories"
+      ],
+      "status": "✅ WORKING - Public demo service"
+    },
+    "your-custom-service": {
+      "description": "Template for your custom OData service",
+      "service_url": "https://your-system.com/odata/YourService/",
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://your-system.com/odata/YourService/",
+        "--user", "your-username",
+        "--password", "your-password",
+        "--tool-shrink",
+        "--read-only",
+        "--max-items", "50"
+      ],
+      "status": "📝 Template - Update with your service details"
+    }
+  },
+  "quick_test_commands": {
+    "test_employee_service": "odata-mcp --trace --service 'https://vhcals4hci.awspoc.club/sap/opu/odata/sap/APS_BUM_EMPLOYEE_SRV/' --user 'bpinst' --password 'Welcome1' --tool-shrink --read-only",
+    "test_northwind": "odata-mcp --trace --service 'https://services.odata.org/V2/Northwind/Northwind.svc/' --tool-shrink --read-only --entities 'Products,Orders'",
+    "test_custom_service": "odata-mcp --trace --service 'YOUR_SERVICE_URL' --user 'YOUR_USER' --password 'YOUR_PASS' --tool-shrink --read-only"
+  }
+}

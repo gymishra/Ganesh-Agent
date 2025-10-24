@@ -1,0 +1,23 @@
+{
+    "fileLocations": [
+        {
+            "URIs": [
+                "s3://sapogrndata/EXPORT_20250623000855.xlsx",
+                "s3://sapogrndata/Material Description.xlsx"
+            ]
+        },
+        {
+            "URIPrefixes": [
+                "s3://sapogrndata/",
+                "s3://734a81dd-4d68-47af-hgyt1by31wbnezdejhddi1uuo6bfquse1b--table-s3/data/",
+                "s3://734a81dd-4d68-47af-hgyt1by31wbnezdejhddi1uuo6bfquse1b--table-s3/metadata/"
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+        "format": "JSON",
+        "delimiter": ",",
+        "textqualifier": "'",
+        "containsHeader": "true"
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "adt_endpoints": {
+    "packages": {
+      "primary": "/sap/bc/adt/packages",
+      "alternatives": [
+        "/sap/bc/adt/repository/informationsystem/search?operation=quickSearch&query=*&objectType=DEVC/K",
+        "/sap/bc/adt/repository/nodestructure?parent_name=$ROOT&parent_type=DEVC/K",
+        "/sap/bc/adt/discovery"
+      ]
+    },
+    "programs": {
+      "primary": "/sap/bc/adt/programs",
+      "alternatives": [
+        "/sap/bc/adt/repository/informationsystem/search?operation=quickSearch&query=*&objectType=PROG/P"
+      ]
+    },
+    "classes": {
+      "primary": "/sap/bc/adt/classes",
+      "alternatives": [
+        "/sap/bc/adt/repository/informationsystem/search?operation=quickSearch&query=*&objectType=CLAS/OC"
+      ]
+    }
+  },
+  "fallback_mode": {
+    "enabled": true,
+    "use_mock_data": true,
+    "mock_data_path": "/home/gyanmis/mock_sap_data.json"
+  },
+  "error_handling": {
+    "retry_attempts": 3,
+    "timeout_seconds": 10,
+    "fallback_on_400": true,
+    "fallback_on_404": true
+  }
+}

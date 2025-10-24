@@ -1,0 +1,354 @@
+{
+  "CustomerMasterService": {
+    "PURPOSE": [
+      "The CustomerMasterService manages all customer-related data and processes, serving as the central repository for customer information, contact details, and business relationships.",
+      "It handles core business processes such as customer onboarding, account management, sales and marketing activities, and customer support interactions.",
+      "The service maintains critical data assets like customer profiles, contracts, communication history, and purchase records, enabling efficient operations and data-driven decision-making across the organization. Key stakeholders include sales teams, customer service representatives, marketing personnel, and business analysts."
+    ],
+    "ENTITIES": [
+      {
+        "name": "Customer",
+        "description": "Core entity containing customer profile information and key business relationships.",
+        "fields": [
+          {
+            "name": "CustomerID",
+            "description": "Unique customer identifier used for lookups, order references, and linking customer data across all business systems and processes."
+          },
+          {
+            "name": "CustomerName",
+            "description": "Official registered name of the customer organization, used for legal and contractual purposes as well as customer communications."
+          },
+          {
+            "name": "CustomerType",
+            "description": "Categorizes customers based on their business model, size, industry, or other criteria, enabling tailored service offerings and targeted marketing campaigns."
+          },
+          {
+            "name": "PrimaryContact",
+            "description": "Details of the main point of contact at the customer organization, essential for effective communication and relationship management."
+          },
+          {
+            "name": "SalesRepID",
+            "description": "Identifier of the sales representative responsible for managing the customer account, facilitating sales activities and ensuring customer satisfaction."
+          },
+          {
+            "name": "CustomerSince",
+            "description": "Date when the customer relationship was established, useful for analyzing customer lifetime value and targeting loyalty programs."
+          },
+          {
+            "name": "PreferredCommunication",
+            "description": "Customer's preferred method of communication (e.g., email, phone, mail), enabling more effective and personalized interactions."
+          }
+        ]
+      },
+      {
+        "name": "Address",
+        "description": "Contains physical address information for customer locations and facilities.",
+        "fields": [
+          {
+            "name": "AddressID",
+            "description": "Unique identifier for each customer address record, enabling efficient data management and integration with other systems."
+          },
+          {
+            "name": "CustomerID",
+            "description": "Links the address record to the corresponding customer, allowing for multiple addresses per customer."
+          },
+          {
+            "name": "AddressType",
+            "description": "Categorizes the address as billing, shipping, headquarters, or other types, ensuring proper handling of communications and deliveries."
+          },
+          {
+            "name": "Street",
+            "description": "Street name and number of the physical address location."
+          },
+          {
+            "name": "City",
+            "description": "City where the address is located, used for geographic analysis, logistics planning, and targeted marketing efforts."
+          },
+          {
+            "name": "State",
+            "description": "State or province where the address is located, important for compliance with regional regulations and tax calculations."
+          },
+          {
+            "name": "PostalCode",
+            "description": "Postal or ZIP code of the address, facilitating accurate delivery and integration with logistics systems."
+          },
+          {
+            "name": "Country",
+            "description": "Country where the address is located, crucial for international operations, customs clearance, and localization efforts."
+          }
+        ]
+      }
+    ],
+    "USE_CASES": [
+      "Show me all customers based in New York City",
+      "List the primary contacts for our top 10 customers by revenue",
+      "What is the address for customer ABC Corporation's headquarters?",
+      "Find customers who became our clients in 2022",
+      "Give me the details of customers managed by sales rep John Doe",
+      "Display customers preferring email communication for our next marketing campaign",
+      "Search for companies classified as 'Enterprise' customers",
+      "Retrieve the shipping address for customer XYZ Ltd's Chicago office",
+      "Show me customers without an assigned sales representative",
+      "List all customer names and their corresponding customer IDs",
+      "Find customers located in the state of California",
+      "Get me the primary contact information for our oldest active customer",
+      "Search for customers based in the UK or Germany",
+      "Show customers who signed up for our services before 2018",
+      "What is the billing address for Acme Inc.?"
+    ],
+    "endpoint": "https://sap-system/odata/CustomerMasterService",
+    "oauth2_config": {
+      "token_endpoint": "https://sap-system/oauth/token",
+      "client_id": "customermasterservice-client",
+      "client_secret_arn": "arn:aws:secretsmanager:us-east-1:account:secret:customermasterservice-secret"
+    }
+  },
+  "SalesOrderService": {
+    "PURPOSE": [
+      "The SalesOrderService handles the entire sales order lifecycle, from order creation and tracking to fulfillment and invoicing.",
+      "It manages all data related to customer orders, including order details, product information, pricing, shipping, and payment details.",
+      "This service is critical for sales operations, order management, inventory control, and customer service processes. Key stakeholders include sales teams, customer service representatives, warehouse and logistics personnel, and finance teams."
+    ],
+    "ENTITIES": [
+      {
+        "name": "SalesOrder",
+        "description": "Represents a customer order for products or services.",
+        "fields": [
+          {
+            "name": "OrderID",
+            "description": "Unique identifier for the sales order used for tracking and reference purposes across all systems and processes."
+          },
+          {
+            "name": "CustomerID",
+            "description": "Unique customer identifier used for lookups, order references, and linking customer data across all business systems and processes."
+          },
+          {
+            "name": "OrderDate",
+            "description": "The date the customer placed the order, used for tracking order age, prioritization, and meeting service level agreements (SLAs)."
+          },
+          {
+            "name": "RequestedDeliveryDate",
+            "description": "The date the customer expects to receive the order, used for logistics planning, setting customer expectations, and monitoring on-time delivery performance."
+          },
+          {
+            "name": "OrderStatus",
+            "description": "The current status of the order (e.g., pending, processing, shipped, delivered), used for order tracking, customer updates, and identifying potential issues or delays."
+          },
+          {
+            "name": "TotalAmount",
+            "description": "The total monetary value of the order, including products, services, taxes, and any applicable discounts or fees. Used for invoicing, revenue recognition, and financial reporting."
+          },
+          {
+            "name": "PaymentMethod",
+            "description": "The payment method selected by the customer (e.g., credit card, bank transfer, PayPal), used for processing payments and reconciling accounts receivable."
+          },
+          {
+            "name": "ShippingAddress",
+            "description": "The address where the order should be delivered, used for logistics planning, shipping label generation, and tracking shipments."
+          }
+        ]
+      },
+      {
+        "name": "OrderItem",
+        "description": "Represents an individual product or service included in a sales order.",
+        "fields": [
+          {
+            "name": "OrderItemID",
+            "description": "Unique identifier for the order item, used for tracking individual items within an order and linking to product and inventory data."
+          },
+          {
+            "name": "OrderID",
+            "description": "The identifier of the parent sales order that this item belongs to, used for linking order items to the overall order details."
+          },
+          {
+            "name": "ProductID",
+            "description": "The identifier of the product or service being ordered, used for linking to product catalogs, inventory levels, and pricing information."
+          },
+          {
+            "name": "Quantity",
+            "description": "The number of units of the product or service being ordered, used for inventory management, order fulfillment, and calculating order totals."
+          },
+          {
+            "name": "UnitPrice",
+            "description": "The price per unit of the product or service, used for calculating order totals, revenue recognition, and profitability analysis."
+          },
+          {
+            "name": "TotalAmount",
+            "description": "The total monetary value of this order item, calculated as Quantity * UnitPrice, used for order totals, invoicing, and revenue recognition."
+          },
+          {
+            "name": "ItemStatus",
+            "description": "The current status of this specific order item (e.g., pending, in stock, backordered), used for order tracking, inventory management, and customer updates."
+          }
+        ]
+      }
+    ],
+    "USE_CASES": [
+      "Show me all open sales orders",
+      "What are the details of order #12345?",
+      "List orders placed by customer 'ABC Corporation' in the last 30 days",
+      "How many orders were shipped last week?",
+      "Give me the total revenue from orders in Q1 2023",
+      "Find orders with a requested delivery date before June 1st",
+      "Show me orders that are delayed or past their expected delivery date",
+      "What's the average order value for customers in the 'West' region?",
+      "Which products had the highest sales volumes in March?",
+      "List all orders paid by credit card",
+      "Search for orders containing product 'XYZ'",
+      "Update the shipping address for order #98765",
+      "Change the status of order item #0011 to 'backordered'",
+      "Create a new sales order for customer 'Acme Inc.'",
+      "I need to see all orders from our top 10 customers by revenue"
+    ],
+    "endpoint": "https://sap-system/odata/SalesOrderService",
+    "oauth2_config": {
+      "token_endpoint": "https://sap-system/oauth/token",
+      "client_id": "salesorderservice-client",
+      "client_secret_arn": "arn:aws:secretsmanager:us-east-1:account:secret:salesorderservice-secret"
+    }
+  },
+  "ProductCatalogService": {
+    "PURPOSE": [
+      "The ProductCatalogService manages all product-related information, inventory levels, and pricing data across the organization.",
+      "It handles core business processes such as product lifecycle management, inventory tracking, pricing strategies, and order fulfillment.",
+      "This service maintains a centralized repository of product data that is used by various stakeholders including sales, marketing, supply chain, finance, and customer service teams to support their respective operations."
+    ],
+    "ENTITIES": [
+      {
+        "name": "Product",
+        "description": "Represents a unique product or stock-keeping unit (SKU) offered by the company.",
+        "fields": [
+          {
+            "name": "ProductID",
+            "description": "Unique identifier for the product used for tracking and referencing across all systems and processes."
+          },
+          {
+            "name": "ProductName",
+            "description": "The commercial name or title of the product as presented to customers and used in marketing materials."
+          },
+          {
+            "name": "ProductDescription",
+            "description": "Detailed description of the product, including features, specifications, and any additional information to help customers understand its purpose and value proposition."
+          },
+          {
+            "name": "Category",
+            "description": "The broad product category or classification used for grouping and organizing related products within the catalog."
+          },
+          {
+            "name": "Brand",
+            "description": "The brand name associated with the product, which can influence customer perception, pricing, and marketing strategies."
+          },
+          {
+            "name": "Manufacturer",
+            "description": "The company or entity responsible for producing and supplying the product, which can impact sourcing, quality control, and supply chain processes."
+          },
+          {
+            "name": "UnitPrice",
+            "description": "The base price for a single unit of the product, used for calculating order totals, setting promotional pricing, and analyzing profitability."
+          },
+          {
+            "name": "DiscontinuedDate",
+            "description": "The date on which the product was discontinued or marked for end-of-life, affecting inventory management and sales strategies."
+          }
+        ]
+      },
+      {
+        "name": "Inventory",
+        "description": "Tracks the current stock levels and availability of products across various locations.",
+        "fields": [
+          {
+            "name": "ProductID",
+            "description": "Unique identifier for the product, linking inventory records to the corresponding product information."
+          },
+          {
+            "name": "LocationID",
+            "description": "Identifier for the specific warehouse, store, or distribution center where the product is stocked."
+          },
+          {
+            "name": "QuantityOnHand",
+            "description": "The current physical count of units available in the specified location, used for order fulfillment and replenishment planning."
+          },
+          {
+            "name": "ReorderLevel",
+            "description": "The minimum quantity threshold at which a reorder should be triggered to maintain sufficient stock levels."
+          },
+          {
+            "name": "LeadTime",
+            "description": "The typical lead time or duration required to receive a new shipment of the product from the supplier or manufacturer."
+          },
+          {
+            "name": "LastStockUpdate",
+            "description": "The date and time when the inventory levels for this product and location were last updated or synchronized."
+          },
+          {
+            "name": "PreferredVendor",
+            "description": "The primary or preferred supplier or vendor for replenishing stock of this product, based on factors like cost, lead time, and quality."
+          }
+        ]
+      },
+      {
+        "name": "PriceList",
+        "description": "Maintains pricing information, including base prices, discounts, and special pricing rules for products.",
+        "fields": [
+          {
+            "name": "ProductID",
+            "description": "Unique identifier for the product, linking pricing records to the corresponding product information."
+          },
+          {
+            "name": "PriceListID",
+            "description": "Identifier for a specific price list, which may be associated with customer segments, sales channels, or promotional campaigns."
+          },
+          {
+            "name": "BasePrice",
+            "description": "The standard or list price for the product, before any discounts or special pricing rules are applied."
+          },
+          {
+            "name": "DiscountPercentage",
+            "description": "The percentage discount to be applied to the base price, based on factors like customer loyalty, order volume, or promotional offers."
+          },
+          {
+            "name": "EffectiveStartDate",
+            "description": "The date on which the specified pricing becomes effective, allowing for future price changes to be scheduled and managed."
+          },
+          {
+            "name": "EffectiveEndDate",
+            "description": "The date on which the specified pricing expires or is no longer valid, facilitating time-limited promotions or seasonal pricing adjustments."
+          },
+          {
+            "name": "PricingRuleID",
+            "description": "Identifier for any special pricing rules or conditions that should be applied, such as volume discounts, bundle pricing, or customer-specific agreements."
+          }
+        ]
+      }
+    ],
+    "USE_CASES": [
+      "What products are currently in stock at our main warehouse?",
+      "Show me all products under the 'Electronics' category with their descriptions and prices.",
+      "I need to find the vendor information for a specific product ID.",
+      "How many units of product XYZ do we have available across all locations?",
+      "When is the reorder point for product ABC at our Chicago distribution center?",
+      "What are the base prices for our top-selling products this quarter?",
+      "Give me a list of products that are going to be discontinued in the next 6 months.",
+      "I'm looking for products made by 'Acme Corp' that cost less than $50.",
+      "Show me inventory levels for all products under the 'Outdoor Gear' brand.",
+      "What discounts or promotions are currently active for our 'Premium' customer price list?",
+      "I need to find products with 'waterproof' in their description and check availability.",
+      "Can you tell me the lead time for replenishing stock of product 123 from our preferred vendor?",
+      "Are there any special pricing rules or bundles for our 'Back to School' promotion?",
+      "What were our top 10 products by revenue last year, and what are their current prices?",
+      "I want to see all products that have been discontinued, along with their discontinuation dates."
+    ],
+    "endpoint": "https://sap-system/odata/ProductCatalogService",
+    "oauth2_config": {
+      "token_endpoint": "https://sap-system/oauth/token",
+      "client_id": "productcatalogservice-client",
+      "client_secret_arn": "arn:aws:secretsmanager:us-east-1:account:secret:productcatalogservice-secret"
+    }
+  },
+  "_metadata": {
+    "generated_date": "2025-08-10T11:03:36.919519",
+    "generator": "Amazon Bedrock Claude 3 Sonnet",
+    "version": "1.0",
+    "description": "AI-generated OData service metadata for intelligent routing"
+  }
+}

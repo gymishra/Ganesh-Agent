@@ -1,0 +1,146 @@
+{
+  "YourCustomerService": {
+    "endpoint": "https://your-sap-system/odata/CustomerService",
+    "oauth2_config": {
+      "token_endpoint": "https://your-sap-system/oauth/token",
+      "client_id": "your-customer-service-client-id",
+      "client_secret_arn": "arn:aws:secretsmanager:region:account:secret:customer-service-secret"
+    },
+    "purpose": "Replace this with detailed description of what your customer service does - include all business processes it handles",
+    "entities": {
+      "Customer": {
+        "description": "Describe what customer entity contains and its business purpose",
+        "fields": {
+          "CustomerID": "Describe what this field contains and when it's used",
+          "CompanyName": "Describe the business name field and its usage",
+          "CreditLimit": "Describe credit limit field and business rules",
+          "ContactEmail": "Describe email field and communication purposes"
+        }
+      },
+      "CustomerAddress": {
+        "description": "Describe address entity and its relationship to customer",
+        "fields": {
+          "AddressID": "Describe address identifier",
+          "AddressType": "Describe different address types (billing, shipping, etc.)",
+          "Street": "Describe street address field",
+          "City": "Describe city field",
+          "PostalCode": "Describe postal code field"
+        }
+      }
+    },
+    "use_cases": [
+      "customer lookup",
+      "credit verification", 
+      "contact information retrieval",
+      "customer demographics",
+      "address management",
+      "Add your specific use cases here"
+    ]
+  },
+  "YourSalesOrderService": {
+    "endpoint": "https://your-sap-system/odata/SalesOrderService", 
+    "oauth2_config": {
+      "token_endpoint": "https://your-sap-system/oauth/token",
+      "client_id": "your-sales-service-client-id",
+      "client_secret_arn": "arn:aws:secretsmanager:region:account:secret:sales-service-secret"
+    },
+    "purpose": "Describe your sales order service - what business processes it handles, what data it manages",
+    "entities": {
+      "SalesOrder": {
+        "description": "Describe sales order header and what business information it contains",
+        "fields": {
+          "OrderID": "Describe order identifier and numbering scheme",
+          "CustomerID": "Describe customer reference and relationship",
+          "OrderDate": "Describe when orders are created and date significance", 
+          "OrderStatus": "Describe different order statuses and workflow",
+          "TotalAmount": "Describe how total is calculated and currency",
+          "DeliveryDate": "Describe delivery planning and date management"
+        }
+      },
+      "SalesOrderItem": {
+        "description": "Describe order line items and product details",
+        "fields": {
+          "ItemID": "Describe line item identification",
+          "ProductID": "Describe product reference and catalog",
+          "Quantity": "Describe quantity units and measurement",
+          "UnitPrice": "Describe pricing and currency handling",
+          "LineTotal": "Describe line total calculation"
+        }
+      }
+    },
+    "use_cases": [
+      "order tracking",
+      "sales reporting",
+      "order status updates", 
+      "delivery management",
+      "sales analytics",
+      "Add your specific sales use cases"
+    ]
+  },
+  "YourInventoryService": {
+    "endpoint": "https://your-sap-system/odata/InventoryService",
+    "oauth2_config": {
+      "token_endpoint": "https://your-sap-system/oauth/token", 
+      "client_id": "your-inventory-service-client-id",
+      "client_secret_arn": "arn:aws:secretsmanager:region:account:secret:inventory-service-secret"
+    },
+    "purpose": "Describe your inventory management service and stock control processes",
+    "entities": {
+      "Product": {
+        "description": "Describe product master data and catalog information",
+        "fields": {
+          "ProductID": "Describe product identification scheme",
+          "ProductName": "Describe product naming and display",
+          "Category": "Describe product categorization system",
+          "StockQuantity": "Describe inventory tracking and units",
+          "ReorderLevel": "Describe reorder points and procurement",
+          "UnitPrice": "Describe pricing and cost management"
+        }
+      },
+      "StockMovement": {
+        "description": "Describe inventory movements and transactions",
+        "fields": {
+          "MovementID": "Describe movement transaction identifier",
+          "ProductID": "Describe product reference",
+          "MovementType": "Describe different movement types (receipt, issue, transfer)",
+          "Quantity": "Describe movement quantities",
+          "MovementDate": "Describe transaction timing",
+          "Warehouse": "Describe warehouse or location information"
+        }
+      }
+    },
+    "use_cases": [
+      "stock level checking",
+      "inventory movements",
+      "product availability",
+      "reorder management", 
+      "warehouse operations",
+      "Add your inventory-specific use cases"
+    ]
+  },
+  "INSTRUCTIONS": {
+    "purpose": "This template helps you define your OData services for AI model training",
+    "steps": [
+      "1. Replace 'YourServiceName' with actual service names",
+      "2. Update endpoints with your actual SAP system URLs", 
+      "3. Configure OAuth2 settings with your authentication details",
+      "4. Write detailed, business-focused descriptions for 'purpose' fields",
+      "5. List all entities your service exposes",
+      "6. Describe each field in business terms, not just technical terms",
+      "7. Add comprehensive use cases that users might ask about",
+      "8. Include synonyms and alternative terms users might use",
+      "9. Be specific about business processes and workflows",
+      "10. Test with real user questions to refine descriptions"
+    ],
+    "tips": [
+      "Use business language, not technical jargon",
+      "Include common synonyms and alternative terms",
+      "Describe the 'why' not just the 'what' for each field",
+      "Think about how end users would ask questions",
+      "Include edge cases and special scenarios",
+      "Add context about when fields are used or populated",
+      "Describe relationships between entities",
+      "Include business rules and constraints"
+    ]
+  }
+}

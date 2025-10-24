@@ -1,0 +1,275 @@
+[
+  {
+    "id": "ZAPI_SALES_ORDER_SRV_0001",
+    "technicalName": "ZAPI_SALES_ORDER_SRV",
+    "description": "Sales Order (A2X)",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_SALES_ORDER_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_SALES_ORDER_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_LOGBR_NOTAFISCAL_SRV_0001",
+    "technicalName": "ZAPI_LOGBR_NOTAFISCAL_SRV",
+    "description": "API for Nota Fiscal for Brazil",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_LOGBR_NOTAFISCAL_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_LOGBR_NOTAFISCAL_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_FKK_NOAPP_SEPA_MANDATE_SRV_0001",
+    "technicalName": "ZAPI_FKK_NOAPP_SEPA_MANDATE_SRV",
+    "description": "FI-CA API SEPA Mandates",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_FKK_NOAPP_SEPA_MANDATE_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_FKK_NOAPP_SEPA_MANDATE_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTENANCEBOM_0001",
+    "technicalName": "ZAPI_MAINTENANCEBOM",
+    "description": "Service for Maintenance BOM",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEBOM",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEBOM/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTENANCEITEM_0001",
+    "technicalName": "ZAPI_MAINTENANCEITEM",
+    "description": "Maintenance Item Web API",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEITEM",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEITEM/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTENANCEORDER_0001",
+    "technicalName": "ZAPI_MAINTENANCEORDER",
+    "description": "Odata Maintenance Order",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEORDER",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEORDER/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTENANCEPLAN_0001",
+    "technicalName": "ZAPI_MAINTENANCEPLAN",
+    "description": "1",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEPLAN",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTENANCEPLAN/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTNOTIFICATION_0001",
+    "technicalName": "ZAPI_MAINTNOTIFICATION",
+    "description": "Maintenance Notification",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTNOTIFICATION",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTNOTIFICATION/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTORDERCONFIRMATION_0001",
+    "technicalName": "ZAPI_MAINTORDERCONFIRMATION",
+    "description": "Service Binding for Maint. Order Confirmation",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTORDERCONFIRMATION",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTORDERCONFIRMATION/$metadata"
+  },
+  {
+    "id": "ZAPI_MAINTORDERINSPLOT_0001",
+    "technicalName": "ZAPI_MAINTORDERINSPLOT",
+    "description": "WorkOrderInfo",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTORDERINSPLOT",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MAINTORDERINSPLOT/$metadata"
+  },
+  {
+    "id": "ZAPI_NJIT_CCYC_MANAGE_SRV_0001",
+    "technicalName": "ZAPI_NJIT_CCYC_MANAGE_SRV",
+    "description": "API for management of control cycle",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_NJIT_CCYC_MANAGE_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_NJIT_CCYC_MANAGE_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_WHSE_INBOUND_DELIVERY_0001",
+    "technicalName": "ZAPI_WHSE_INBOUND_DELIVERY",
+    "description": "Service Warehouse Inbound Delivery",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_INBOUND_DELIVERY",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_INBOUND_DELIVERY/$metadata"
+  },
+  {
+    "id": "ZAPI_WHSE_PHYSINVENTORYITEM_0001",
+    "technicalName": "ZAPI_WHSE_PHYSINVENTORYITEM",
+    "description": "Service for WHSE Physical Inventory Item",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_PHYSINVENTORYITEM",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_PHYSINVENTORYITEM/$metadata"
+  },
+  {
+    "id": "ZAPI_OUTBOUND_DELIVERY_SRV_0002",
+    "technicalName": "ZAPI_OUTBOUND_DELIVERY_SRV",
+    "description": "Remote API for Outbound Delivery",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/$metadata"
+  },
+  {
+    "id": "ZAPI_PRODUCT_SRV_0001",
+    "technicalName": "ZAPI_PRODUCT_SRV",
+    "description": "Remote API for Product Master",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_PRODUCT_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_PRODUCT_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_BUSINESS_PARTNER_0001",
+    "technicalName": "ZAPI_BUSINESS_PARTNER",
+    "description": "Remote API for Business Partner",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_BUSINESS_PARTNER/$metadata"
+  },
+  {
+    "id": "ZAPI_PHYSICAL_INVENTORY_DOC_SRV_0001",
+    "technicalName": "ZAPI_PHYSICAL_INVENTORY_DOC_SRV",
+    "description": "OData Service for Physical Inventory API",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_PHYSICAL_INVENTORY_DOC_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_PHYSICAL_INVENTORY_DOC_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_MATERIAL_STOCK_SRV_0001",
+    "technicalName": "ZAPI_MATERIAL_STOCK_SRV",
+    "description": "OData Service for Material Stock API",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MATERIAL_STOCK_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_MATERIAL_STOCK_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_DOC_GEN_REQUEST_0001",
+    "technicalName": "ZAPI_DOC_GEN_REQUEST",
+    "description": "ZAPI_DOC_GEN_REQUEST",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/ZAPI_DOC_GEN_REQUEST",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/ZAPI_DOC_GEN_REQUEST/$metadata"
+  },
+  {
+    "id": "ZAPI_BILL_OF_MATERIAL_SRV_0002",
+    "technicalName": "ZAPI_BILL_OF_MATERIAL_SRV",
+    "description": "Bills of Material",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_BILL_OF_MATERIAL_SRV;v=0002",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_BILL_OF_MATERIAL_SRV;v=0002/$metadata"
+  },
+  {
+    "id": "ZAPI_INFORECORD_PROCESS_SRV_0001",
+    "technicalName": "ZAPI_INFORECORD_PROCESS_SRV",
+    "description": "OData service for Purchasing Info Record API",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_INFORECORD_PROCESS_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_INFORECORD_PROCESS_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_CUSTOMER_MATERIAL_SRV_0001",
+    "technicalName": "ZAPI_CUSTOMER_MATERIAL_SRV",
+    "description": "Remote API for Customer Material",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_CUSTOMER_MATERIAL_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_CUSTOMER_MATERIAL_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_BP_CHANGE_LOG_0001",
+    "technicalName": "ZAPI_BP_CHANGE_LOG",
+    "description": "ZAPI_BP_CHANGE_LOG",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/ZAPI_BP_CHANGE_LOG",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/ZAPI_BP_CHANGE_LOG/$metadata"
+  },
+  {
+    "id": "ZAPI_OPLACCTGDOCITEMCUBE_SRV_0001",
+    "technicalName": "ZAPI_OPLACCTGDOCITEMCUBE_SRV",
+    "description": "API for Operational Accounting Document Header and Item",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_OPLACCTGDOCITEMCUBE_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_OPLACCTGDOCITEMCUBE_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_WHSE_OUTB_DLV_ORDER_0001",
+    "technicalName": "ZAPI_WHSE_OUTB_DLV_ORDER",
+    "description": "Service WarehouseOutboundDeliveryOrder",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_OUTB_DLV_ORDER",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WHSE_OUTB_DLV_ORDER/$metadata"
+  },
+  {
+    "id": "ZAPI_WAREHOUSE_0001",
+    "technicalName": "ZAPI_WAREHOUSE",
+    "description": "Service for Warehouse",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE/$metadata"
+  },
+  {
+    "id": "ZAPI_WAREHOUSE_STORAGE_BIN_0001",
+    "technicalName": "ZAPI_WAREHOUSE_STORAGE_BIN",
+    "description": "Service for Warehouse Storage Bin",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_STORAGE_BIN",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_STORAGE_BIN/$metadata"
+  },
+  {
+    "id": "ZAPI_WAREHOUSE_RESOURCE_0001",
+    "technicalName": "ZAPI_WAREHOUSE_RESOURCE",
+    "description": "RAP: API_WAREHOUSE_RESOURCE generated at 20190214",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_RESOURCE",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_RESOURCE/$metadata"
+  },
+  {
+    "id": "ZAPI_WAREHOUSE_ORDER_TASK_0001",
+    "technicalName": "ZAPI_WAREHOUSE_ORDER_TASK",
+    "description": "RAP: API_WAREHOUSE_ORDER_TASK generated at 20190206",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_ORDER_TASK",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WAREHOUSE_ORDER_TASK/$metadata"
+  },
+  {
+    "id": "ZAPI_DISPUTECASE_0001",
+    "technicalName": "ZAPI_DISPUTECASE",
+    "description": "Dispute Case API",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASE",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASE/$metadata"
+  },
+  {
+    "id": "ZAPI_DISPUTECASEASCOORDTR_0001",
+    "technicalName": "ZAPI_DISPUTECASEASCOORDTR",
+    "description": "Dispute Case As Coordinator",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASCOORDTR",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASCOORDTR/$metadata"
+  },
+  {
+    "id": "ZAPI_DISPUTECASEASPERSNRESP_0001",
+    "technicalName": "ZAPI_DISPUTECASEASPERSNRESP",
+    "description": "Dispute Case As Person Responsible",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASPERSNRESP",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASPERSNRESP/$metadata"
+  },
+  {
+    "id": "ZAPI_DISPUTECASEASPROCESSOR_0001",
+    "technicalName": "ZAPI_DISPUTECASEASPROCESSOR",
+    "description": "Dispute Case As Processor",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASPROCESSOR",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISPUTECASEASPROCESSOR/$metadata"
+  },
+  {
+    "id": "ZAPI_DISTRIBUTIONCHANNEL_SRV_0001",
+    "technicalName": "ZAPI_DISTRIBUTIONCHANNEL_SRV",
+    "description": "Distribution Channel - Read",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISTRIBUTIONCHANNEL_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_DISTRIBUTIONCHANNEL_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_WORK_CENTERS_0001",
+    "technicalName": "ZAPI_WORK_CENTERS",
+    "description": "API for Work Centers",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WORK_CENTERS",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/API_WORK_CENTERS/$metadata"
+  },
+  {
+    "id": "ZSGBT_NTE_CDS_API_D_SRV_0001",
+    "technicalName": "ZSGBT_NTE_CDS_API_D_SRV",
+    "description": "Notes for Application Object - Draft",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/SGBT_NTE_CDS_API_D_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/SGBT_NTE_CDS_API_D_SRV/$metadata"
+  },
+  {
+    "id": "ZSGBT_NTE_CDS_API_SRV_0001",
+    "technicalName": "ZSGBT_NTE_CDS_API_SRV",
+    "description": "OData Service for Notes for Application Object",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/SGBT_NTE_CDS_API_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/sap/SGBT_NTE_CDS_API_SRV/$metadata"
+  },
+  {
+    "id": "ZAPI_MANAGE_WF_AVAILABILITY_0001",
+    "technicalName": "ZAPI_MANAGE_WF_AVAILABILITY",
+    "description": "Public API - Availability",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/shcm/API_MANAGE_WF_AVAILABILITY",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/shcm/API_MANAGE_WF_AVAILABILITY/$metadata"
+  },
+  {
+    "id": "ZAPI_MANAGE_SKILLTAGS_SRV_0001",
+    "technicalName": "ZAPI_MANAGE_SKILLTAGS_SRV",
+    "description": "Workforce Person SkillTag \u2013 Create, Read and Delete",
+    "serviceUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/shcm/API_MANAGE_SKILLTAGS_SRV",
+    "metadataUrl": "https://VHCALS4HCI.AWSPOC.CLUB:443/sap/opu/odata/shcm/API_MANAGE_SKILLTAGS_SRV/$metadata"
+  }
+]

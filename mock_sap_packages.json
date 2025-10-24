@@ -1,0 +1,52 @@
+[
+  {
+    "name": "$TMP",
+    "description": "Temporary Objects",
+    "type": "DEVC",
+    "uri": "/sap/bc/adt/packages/%24TMP",
+    "parentPackage": "",
+    "responsible": "DEVELOPER",
+    "created": "2024-01-01",
+    "changed": "2024-01-01"
+  },
+  {
+    "name": "ZLOCAL",
+    "description": "Local Development Package",
+    "type": "DEVC",
+    "uri": "/sap/bc/adt/packages/ZLOCAL",
+    "parentPackage": "",
+    "responsible": "DEVELOPER",
+    "created": "2024-01-01",
+    "changed": "2024-01-01"
+  },
+  {
+    "name": "ZTEST",
+    "description": "Test Package for Development",
+    "type": "DEVC",
+    "uri": "/sap/bc/adt/packages/ZTEST",
+    "parentPackage": "",
+    "responsible": "DEVELOPER",
+    "created": "2024-01-01",
+    "changed": "2024-01-01"
+  },
+  {
+    "name": "ZDEMO",
+    "description": "Demo Package for Examples",
+    "type": "DEVC",
+    "uri": "/sap/bc/adt/packages/ZDEMO",
+    "parentPackage": "",
+    "responsible": "DEVELOPER",
+    "created": "2024-01-01",
+    "changed": "2024-01-01"
+  },
+  {
+    "name": "ZUTILITY",
+    "description": "Utility Classes and Functions",
+    "type": "DEVC",
+    "uri": "/sap/bc/adt/packages/ZUTILITY",
+    "parentPackage": "",
+    "responsible": "DEVELOPER",
+    "created": "2024-01-01",
+    "changed": "2024-01-01"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "sap-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch",
+        "http://mcp-sse-alb-906354826.us-east-1.elb.amazonaws.com/mcp"
+      ],
+      "env": {
+        "MCP_FETCH_HEADERS": "{\"SAP_URL\": \"https://vhcals4hci.awspoc.club/\", \"SAP_USER\": \"gyanmis\", \"SAP_PASSWORD\": \"Pass2025$\", \"SAP_CLIENT\": \"100\", \"SAP_LANGUAGE\": \"EN\"}"
+      }
+    }
+  }
+}

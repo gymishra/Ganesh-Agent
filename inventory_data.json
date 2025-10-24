@@ -1,0 +1,28 @@
+{
+    "Contents": [
+        {
+            "Key": "EXPORT_20250623000855.xlsx",
+            "LastModified": "2025-06-25T15:13:56+00:00",
+            "ETag": "\"b247623c7c30a35892a4e995d00fc5a3\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 13808,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "Material Description.xlsx",
+            "LastModified": "2025-06-23T07:23:18+00:00",
+            "ETag": "\"48531045a4be27b128f7a78d1c1a782d\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 11475,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": ""
+}

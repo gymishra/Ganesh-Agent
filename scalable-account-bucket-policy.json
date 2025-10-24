@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowWorkshopAccounts",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::894924264385:root",
+          "arn:aws:iam::953841955037:root",
+          "arn:aws:iam::498897364325:root"
+        ]
+      },
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::wrkshp-qbiz-data",
+        "arn:aws:s3:::wrkshp-qbiz-data/*"
+      ]
+    }
+  ]
+}

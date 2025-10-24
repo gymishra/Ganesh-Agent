@@ -1,0 +1,101 @@
+{
+  "mcp_servers": {
+    "sap-sales-order-service": {
+      "description": "SAP S/4HANA Sales Order Management API - Real production service",
+      "service_url": "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/API_SALES_ORDER_SRV/",
+      "system_info": {
+        "sap_system": "S4H",
+        "sap_client": "100", 
+        "system_type": "SAP S/4HANA",
+        "authentication": "Basic"
+      },
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://vhcals4hci.awspoc.club/sap/opu/odata/sap/API_SALES_ORDER_SRV/",
+        "--user", "${SAP_USERNAME}",
+        "--password", "${SAP_PASSWORD}",
+        "--tool-shrink",
+        "--read-only",
+        "--max-items", "50"
+      ],
+      "environment": {
+        "SAP_USERNAME": "your-sap-username",
+        "SAP_PASSWORD": "your-sap-password"
+      },
+      "expected_entities": [
+        "A_SalesOrder",
+        "A_SalesOrderItem", 
+        "A_SalesOrderHeaderPartner",
+        "A_SalesOrderItemPartner",
+        "A_SalesOrderScheduleLine",
+        "A_SalesOrderHeaderPrElement",
+        "A_SalesOrderItemPrElement"
+      ],
+      "use_cases": [
+        "sales order lookup",
+        "order status checking", 
+        "customer order history",
+        "order item details",
+        "delivery schedule information",
+        "pricing and conditions",
+        "partner and customer information",
+        "order fulfillment tracking"
+      ],
+      "sample_questions": [
+        "Show me sales order 12345",
+        "What's the status of order 67890?",
+        "List all orders for customer ABC123",
+        "Show me order items for order 12345",
+        "When is order 12345 scheduled for delivery?",
+        "What's the total value of order 12345?"
+      ]
+    },
+    "northwind-demo": {
+      "description": "Northwind demo service for testing (no authentication required)",
+      "service_url": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+      "command": "/home/gyanmis/bin/odata-mcp",
+      "args": [
+        "--service", "https://services.odata.org/V2/Northwind/Northwind.svc/",
+        "--tool-shrink",
+        "--read-only",
+        "--entities", "Products,Orders,Customers,Categories"
+      ],
+      "use_cases": [
+        "product catalog browsing",
+        "order management demo",
+        "customer information demo",
+        "category management demo"
+      ]
+    }
+  },
+  "integration_with_ai_classifier": {
+    "description": "Integration workflow with your OData AI Classifier project",
+    "steps": [
+      "1. User asks a natural language question",
+      "2. Your AI classifier (odata_model_training.py) determines which service to use",
+      "3. The appropriate MCP server configuration is selected",
+      "4. MCP server executes the OData operation",
+      "5. Results are formatted and returned to user"
+    ],
+    "example_workflow": {
+      "user_question": "Show me sales order 12345 with all line items",
+      "ai_classifier_decision": "sap-sales-order-service",
+      "mcp_operations": [
+        {
+          "tool": "filter_A_SalesOrder_for_APISALESORDERSRV",
+          "parameters": {
+            "$filter": "SalesOrder eq '12345'",
+            "$expand": "to_Item"
+          }
+        }
+      ],
+      "expected_response": "Sales order details with expanded line items"
+    }
+  },
+  "testing_instructions": {
+    "step1": "Set your SAP credentials: export SAP_USERNAME='your-user' SAP_PASSWORD='your-pass'",
+    "step2": "Run the test script: ./test_sap_sales_order.sh",
+    "step3": "If successful, integrate with your AI classifier",
+    "step4": "Use in production with --read-only flag for safety"
+  }
+}

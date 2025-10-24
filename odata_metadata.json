@@ -1,0 +1,33 @@
+{
+  "SalesOrderService": {
+    "endpoint": "https://your-sap-system/odata/SalesOrderService",
+    "oauth2_config": {
+      "token_endpoint": "https://your-sap-system/oauth/token",
+      "client_id": "your-sales-client-id",
+      "client_secret_arn": "arn:aws:secretsmanager:us-east-1:953841955037:secret:sales-service-secret"
+    },
+    "purpose": "Manages sales orders, order tracking, customer purchases, and sales analytics. Handles the complete order lifecycle from creation to delivery including order modifications, status updates, and customer communications.",
+    "entities": {
+      "SalesOrder": {
+        "description": "Sales order header containing customer information, order totals, dates, and overall order status for tracking purchases and deliveries",
+        "fields": {
+          "OrderID": "Unique order number used to track and reference customer purchases across all systems",
+          "CustomerID": "Customer identifier linking orders to customer master data for account management",
+          "OrderDate": "Date when customer placed the order, used for processing timelines and reporting",
+          "OrderStatus": "Current order state - pending, confirmed, shipped, delivered, cancelled",
+          "TotalAmount": "Complete order value including taxes and shipping for financial reporting",
+          "DeliveryDate": "Planned or actual delivery date for customer expectations and logistics"
+        }
+      }
+    },
+    "use_cases": [
+      "order tracking",
+      "order status",
+      "sales reporting",
+      "customer orders",
+      "order history",
+      "delivery tracking",
+      "order management"
+    ]
+  }
+}
